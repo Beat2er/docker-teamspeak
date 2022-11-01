@@ -1,7 +1,7 @@
 FROM  debian:buster-slim
 
-ENV   TS_VERSION=3.13.2  \
-      TS_SHA256SUM="ffb6c8cc222228eaaed79930ebd39fbf2f8a6d557d1a67d7eafc5e7e8c4931d1" \
+ENV   TS_VERSION=3.13.5  \
+      TS_SHA256SUM="dad497fc44f6959b22d26541dca9db9c15cc49346c9de19403cc3a999e939a56" \
       TS_FILENAME=teamspeak3-server_linux_amd64 \
       TS_USER=teamspeak \
       TS_HOME=/teamspeak
