@@ -1,7 +1,7 @@
 FROM  debian:buster-slim
 
-ENV   TS_VERSION=3.13.5  \
-      TS_SHA256SUM="dad497fc44f6959b22d26541dca9db9c15cc49346c9de19403cc3a999e939a56" \
+ENV   TS_VERSION=3.13.7  \
+      TS_SHA256SUM="775a5731a9809801e4c8f9066cd9bc562a1b368553139c1249f2a0740d50041e" \
       TS_FILENAME=teamspeak3-server_linux_amd64 \
       TS_USER=teamspeak \
       TS_HOME=/teamspeak
@@ -20,7 +20,7 @@ ENV LANGUAGE en_US.UTF-8
 
 WORKDIR ${TS_HOME}
 
-RUN     curl -sSLo "/tmp/$TS_FILENAME.tar.gz" "http://dl.4players.de/ts/releases/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" \
+RUN     curl -sSLo "/tmp/$TS_FILENAME.tar.gz" "https://files.teamspeak-services.com/releases/server/${TS_VERSION}/${TS_FILENAME}-${TS_VERSION}.tar.bz2" \
         && echo "${TS_SHA256SUM}  /tmp/$TS_FILENAME.tar.gz" | sha256sum -c \
         && tar -xjf "/tmp/$TS_FILENAME.tar.gz" \
         && rm /tmp/$TS_FILENAME.tar.gz \
